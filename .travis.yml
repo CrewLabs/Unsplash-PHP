@@ -10,4 +10,4 @@ before_script:
   - composer install --prefer-source --no-interaction
   - mkdir -p build/logs
 script:
-  - vendor/bin/phpunit
+  - XDEBUG_MODE=coverage vendor/bin/phpunit

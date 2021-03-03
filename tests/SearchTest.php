@@ -29,7 +29,7 @@ class SearchTest extends BaseTest
 
         $this->assertInstanceOf(Unsplash\Photo::class, $photosArrayObject[0]);
         $this->assertEquals(10, $photosArrayObject->count());
-        $this->assertEquals(10, count($photos->getResults()));
+        $this->assertCount(10, $photos->getResults());
         $this->assertEquals(3364, $photos->getTotal());
         $this->assertEquals(337, $photos->getTotalPages());
     }
@@ -45,7 +45,7 @@ class SearchTest extends BaseTest
         $this->assertInstanceOf(Unsplash\Collection::class, $collectionsArrayObject[0]);
         $this->assertEquals(9, $collectionsArrayObject->count());
         $this->assertEquals(160, $collections->getTotal());
-        $this->assertEquals(9, count($collections->getResults()));
+        $this->assertCount(9, $collections->getResults());
         $this->assertEquals(16, $collections->getTotalPages());
     }
 
@@ -60,7 +60,7 @@ class SearchTest extends BaseTest
         $this->assertInstanceOf(Unsplash\User::class, $usersArrayObject[0]);
         $this->assertEquals(1, $usersArrayObject->count());
         $this->assertEquals(1, $users->getTotal());
-        $this->assertEquals(1, count($users->getResults()));
+        $this->assertCount(1, $users->getResults());
         $this->assertEquals(1, $users->getTotalPages());
     }
 
